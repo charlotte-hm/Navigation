@@ -9,10 +9,18 @@ import SwiftUI
 
 struct HelpView: View {
     var body: some View {
-        VStack
+        NavigationStack
         {
-            Text("This is the Help Page")
-        }
+            ZStack
+            {
+                    Color (.systemBlue)
+                        .ignoresSafeArea()
+                Text("This is the Help Page")
+                    .font(.title2)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color.white)
+            } //end of ZStack
+        }// end of nav stack
     }
 }
 

@@ -9,13 +9,25 @@ import SwiftUI
 
 struct Second_View: View {
     var body: some View {
-        VStack (spacing: 10)
+        NavigationStack
         {
-            Text("This is the About Page")
-            Image ("duck")
-                .resizable(resizingMode: .stretch)
-                .aspectRatio(contentMode: .fit)
-        }// end of vstack
+            ZStack
+            {
+                Color (.systemGray)
+                    .ignoresSafeArea()
+
+                VStack (spacing: 10)
+                {
+                    Text("This is the About Page")
+                        .font(.title2)
+                        .fontWeight(.heavy)
+                        .foregroundColor(Color.white)
+                    Image ("duck")
+                        .resizable(resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                } //end of v stack
+            }// end of z stack
+        }// end of nav stack
     }
 }
 #Preview {

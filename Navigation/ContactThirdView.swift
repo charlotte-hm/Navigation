@@ -9,10 +9,18 @@ import SwiftUI
 
 struct ContactThirdView: View {
     var body: some View {
-       VStack
+        NavigationStack
         {
-            Text("This is the Contact Page")
-        }
+            ZStack
+            {
+                Color (.systemPurple)
+                    .ignoresSafeArea()
+                Text("This is the Contact Page")
+                    .font(.title2)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color.white)
+            } // end of z stack
+        } // end of nav stack
     }
 }
 
